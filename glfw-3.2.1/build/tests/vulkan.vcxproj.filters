@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Misha\Desktop\Graphics Engineering Prep\glfw-3.2.1\tests\vulkan.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Misha\Desktop\Graphics Engineering Prep\glfw-3.2.1\tests\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{208A415E-AFF6-32E8-8FE0-A993AE05D31B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
