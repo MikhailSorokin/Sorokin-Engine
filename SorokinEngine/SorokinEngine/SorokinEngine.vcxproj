@@ -70,8 +70,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\Users\Misha\Desktop\Graphics Engineering Prep\Open GL Stuff\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\Misha\Desktop\Graphics Engineering Prep\Open GL Stuff\Libraries;$(LibraryPath)</LibraryPath>
+    <IncludePath>E:\Sorokin-Engine\Open GL Stuff\include;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\Sorokin-Engine\Open GL Stuff\Libraries;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -79,6 +79,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -123,6 +124,18 @@
   <ItemGroup>
     <ClCompile Include="..\..\glad\src\glad.c" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Rendering\Model.cpp" />
+    <ClCompile Include="Rendering\Window.cpp" />
+    <ClCompile Include="Shaders\Shader.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shaders\simple_triangle.frag" />
+    <None Include="Shaders\simple_triangle.vert" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Rendering\Model.h" />
+    <ClInclude Include="Rendering\Window.h" />
+    <ClInclude Include="Shaders\Shader.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
