@@ -21,23 +21,15 @@ int main() {
 
 
 	float vertices[] = {
-		0.5f,  0.5f, 0.0f,  // top right
-		0.5f, -0.5f, 0.0f,  // bottom right
-		-0.5f, -0.5f, 0.0f,  // bottom left
-		-0.5f,  0.5f, 0.0f   // top left 
-	};
-	unsigned int indices[] = {  // note that we start from 0!
-		0, 1, 3,  // first Triangle
-		1, 2, 3   // second Triangle
+		0.5f,  0.5f, 
+		0.5f, -0.5f,  
+		-0.5f, -0.5f,
+		-0.5f, 0.5f
 	};
 
-	float colors[6][3] = {
-		{ 0, 0, 1 },
-		{ 1, 0, 0 },
-		{ 0, 1, 0 },
-		{ 0, 0, 1 },
-		{ 1, 0, 0 },
-		{ 0, 1, 0 }
+	unsigned int indices[] = {
+		0, 1, 2,
+		2, 3, 0
 	};
 
 	/* ============================ LOAD the SHADERS here (to be loaded in their own class) ==================================== */
@@ -45,49 +37,50 @@ int main() {
 	exampleShader->compileShaders();
 	GLuint shaderProgramExample = exampleShader->createProgram();
 
-	GLuint VAO, VBO[2], EBO;
+	unsigned int VAO, VBO, EBO;
 
+
+	//Model model* = new Model()
 	/* Allocate and assign a Vertex Array Object to our handle */
 	glGenVertexArrays(1, &VAO);
-	glGenBuffers(2, VBO);
-	glGenVertexArrays(1, &EBO);
+	glGenBuffers(1, &VBO);
+	glGenBuffers(1, &EBO);
 	glBindVertexArray(VAO);
 
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
 	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
 
-	glBindBuffer(GL_ARRAY_BUFFER, VBO[0]);
-	/* Copy the vertex data from diamond to our buffer */
-	/* 8 * sizeof(GLfloat) is the size of the diamond array, since it contains 8 GLfloat values */
+	glBindBuffer(GL_ARRAY_BUFFER, VBO);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-	/* Specify that our coordinate data is going into attribute index 0, and contains two floats per vertex */
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
-	/* Enable attribute index 0 as being used */
+
+	glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float), (void*)0);
 	glEnableVertexAttribArray(0);
 
-	/* Bind our second VBO as being the active buffer and storing vertex attributes (colors) */
-	glBindBuffer(GL_ARRAY_BUFFER, VBO[1]);
-	/* Copy the vertex data from diamond to our buffer */
-	/* 8 * sizeof(GLfloat) is the size of the diamond array, since it contains 8 GLfloat values */
-	glBufferData(GL_ARRAY_BUFFER, sizeof(colors), colors, GL_STATIC_DRAW);
-	/* Specify that our coordinate data is going into attribute index 0, and contains three floats per vertex */
-	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 0, 0);
-	/* Enable attribute index 0 as being used */
-	glEnableVertexAttribArray(1);
 
+
+	// note that this is allowed, the call to glVertexAttribPointer registered VBO as the vertex attribute's bound vertex buffer object so afterwards we can safely unbind
+	glBindBuffer(GL_ARRAY_BUFFER, 0);
+
+	glBindVertexArray(0);
+
+	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 	/* ========================== Renderer (OWN CLASS) ============================== */
 	while (!window.closed())
 	{
 		window.clear();
 		/*============================= RENDERING ======================================== */
 		glUseProgram(shaderProgramExample);
-		glDrawElements(GL_TRIANGLES, 0, 6, indices);
+		glBindVertexArray(VAO);
+		//glDrawArrays(GL_TRIANGLES, 0, sizeof(vertices));
+		glDrawElements(GL_TRIANGLES, sizeof(indices), GL_UNSIGNED_INT, 0);
 		/*============================= END RENDERING ======================================== */
 
 		window.update();
 	}
 
 	delete(exampleShader);
+
+
 	return 0;
 }
 

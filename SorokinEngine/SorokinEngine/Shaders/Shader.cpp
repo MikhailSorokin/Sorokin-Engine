@@ -91,7 +91,6 @@ GLuint Shader::createProgram()
 	/* Bind attribute index 0 (coordinates) to in_Position and attribute index 1 (color) to in_Color */
 	/* Attribute locations must be setup before calling glLinkProgram. */
 	glBindAttribLocation(shaderprogram, 0, "in_Position");
-	//glBindAttribLocation(shaderprogram, 1, "in_Color");
 
 	/* Link our program */
 	/* At this stage, the vertex and fragment programs are inspected, optimized and a binary code is generated for the shader. */
