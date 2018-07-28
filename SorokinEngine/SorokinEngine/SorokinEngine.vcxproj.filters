@@ -38,6 +38,8 @@
     <None Include="Shaders\simple_triangle.vert">
       <Filter>Source Files</Filter>
     </None>
+    <None Include="Shaders\simple_triangle2.frag" />
+    <None Include="Shaders\simple_triangle2.vert" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Rendering\Window.h">

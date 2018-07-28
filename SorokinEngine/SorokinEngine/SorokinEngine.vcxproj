@@ -131,6 +131,8 @@
   <ItemGroup>
     <None Include="Shaders\simple_triangle.frag" />
     <None Include="Shaders\simple_triangle.vert" />
+    <None Include="Shaders\simple_triangle2.frag" />
+    <None Include="Shaders\simple_triangle2.vert" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Rendering\Model.h" />

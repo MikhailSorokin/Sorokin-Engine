@@ -10,7 +10,7 @@ char* filetobuf(const char *file);
 
 int main() {
 	//Window must be loaded before gladLoadGLLoader is called!
-	Window window(1920, 1080, "SirrockinEngine");
+	Window window(1080, 720, "SirrockinEngine");
 	window.create();
 
 	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
@@ -20,66 +20,90 @@ int main() {
 	}
 
 
-	float vertices[] = {
-		0.5f,  0.5f, 
-		0.5f, -0.5f,  
-		-0.5f, -0.5f,
-		-0.5f, 0.5f
+	float vertices1[] = {
+		-0.9f, -0.5f,  // left 
+		-0.0f, -0.5f, // right
+		-0.45f, 0.5f  // top 
+	};
+	float colors1[] = {
+		0.f, 1.f, 0.f,
+		0.f, 1.f, 0.f,
+		0.f, 1.f, 0.f
 	};
 
-	unsigned int indices[] = {
-		0, 1, 2,
-		2, 3, 0
+	float vertices2[] = {
+		0.0f, -0.5f,  // left
+		0.9f, -0.5f,  // right
+		0.45f, 0.5f   // top 
+	};
+	float colors2[] = {
+		1.f, 1.f, 0.f,
+		1.f, 1.f, 0.f,
+		1.f, 1.f, 0.f
 	};
 
 	/* ============================ LOAD the SHADERS here (to be loaded in their own class) ==================================== */
-	Shader* exampleShader = new Shader("Shaders/simple_triangle.vert", "Shaders/simple_triangle.frag");
+	Shader* exampleShader = new Shader("Shaders/simple_triangle2.vert", "Shaders/simple_triangle2.frag");
 	exampleShader->compileShaders();
 	GLuint shaderProgramExample = exampleShader->createProgram();
 
-	unsigned int VAO, VBO, EBO;
+	unsigned int VAOs[2], VBOs[4];
 
+	//CHALLENGE 1 - 2 Triangles near each other.
 
 	//Model model* = new Model()
 	/* Allocate and assign a Vertex Array Object to our handle */
-	glGenVertexArrays(1, &VAO);
-	glGenBuffers(1, &VBO);
-	glGenBuffers(1, &EBO);
-	glBindVertexArray(VAO);
+	glGenVertexArrays(2, VAOs);
+	glGenBuffers(4, VBOs);
 
-	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
-	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
+	glBindVertexArray(VAOs[0]);
 
-	glBindBuffer(GL_ARRAY_BUFFER, VBO);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-
+	glBindBuffer(GL_ARRAY_BUFFER, VBOs[0]);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices1), vertices1, GL_STATIC_DRAW);
 	glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float), (void*)0);
 	glEnableVertexAttribArray(0);
 
+	//std::cout << "Size of ColorS: " << sizeof(colors1) << std::endl;
+	glBindBuffer(GL_ARRAY_BUFFER, VBOs[1]);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(colors1), colors1, GL_STATIC_DRAW);
+	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 0, 0);
+	glEnableVertexAttribArray(1);
+
+	glBindVertexArray(VAOs[1]);
+
+	glBindBuffer(GL_ARRAY_BUFFER, VBOs[2]);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices2), vertices2, GL_STATIC_DRAW);
+	glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float), (void*)0);
+	glEnableVertexAttribArray(0);
+
+	glBindBuffer(GL_ARRAY_BUFFER, VBOs[3]);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(colors2), colors2, GL_STATIC_DRAW);
+	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+	glEnableVertexAttribArray(1);
 
 
-	// note that this is allowed, the call to glVertexAttribPointer registered VBO as the vertex attribute's bound vertex buffer object so afterwards we can safely unbind
-	glBindBuffer(GL_ARRAY_BUFFER, 0);
-
-	glBindVertexArray(0);
-
-	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+	//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 	/* ========================== Renderer (OWN CLASS) ============================== */
 	while (!window.closed())
 	{
 		window.clear();
 		/*============================= RENDERING ======================================== */
+		// draw first triangle using the data from the first VAO
 		glUseProgram(shaderProgramExample);
-		glBindVertexArray(VAO);
-		//glDrawArrays(GL_TRIANGLES, 0, sizeof(vertices));
-		glDrawElements(GL_TRIANGLES, sizeof(indices), GL_UNSIGNED_INT, 0);
+		glBindVertexArray(VAOs[0]);
+		glDrawArrays(GL_TRIANGLES, 0, 3);
+		glBindVertexArray(VAOs[1]);
+		glDrawArrays(GL_TRIANGLES, 0, 3);
+		//glDrawElements(GL_TRIANGLES, sizeof(indices), GL_UNSIGNED_INT, 0);
 		/*============================= END RENDERING ======================================== */
 
 		window.update();
 	}
 
-	delete(exampleShader);
+	glDeleteVertexArrays(2, VAOs);
+	glDeleteBuffers(4, VBOs);
 
+	delete(exampleShader);
 
 	return 0;
 }

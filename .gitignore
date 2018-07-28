@@ -32,7 +32,6 @@ SorokinEngine/Debug/SorokinEngine.pdb
 .builds
 *.dotCover
 *.opendb
-*.db
 
 ## TODO: If you have NuGet Package Restore enabled, uncomment this
 #packages/
