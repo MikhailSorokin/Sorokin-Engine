@@ -129,6 +129,8 @@
     <ClCompile Include="Shaders\Shader.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Shaders\opacity_lerp_triangle.frag" />
+    <None Include="Shaders\opacity_lerp_triangle.vert" />
     <None Include="Shaders\simple_triangle.frag" />
     <None Include="Shaders\simple_triangle.vert" />
     <None Include="Shaders\simple_triangle2.frag" />

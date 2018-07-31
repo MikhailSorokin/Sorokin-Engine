@@ -13,11 +13,13 @@ public:
 	void compileShaders();
 	GLuint createProgram();
 
+	void setFloat(const std::string& name, float value) const;
+
 protected:
 	const GLchar* m_vertexShaderSource;
 	const GLchar* m_fragmentShaderSource;
 
 	GLuint m_vertexShader, m_fragmentShader;
-
+	GLuint m_shaderprogram;
 };
 

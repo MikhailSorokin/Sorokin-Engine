@@ -59,7 +59,7 @@ void Window::processInput(GLFWwindow *window)
 void Window::clear()
 {
 	//Have to clear the buffer bit so that we refresh rendering the graphics every frame
-	glClearColor(0, 0, 0, 1.0f);
+	glClearColor(0, 0.2f, 1.0f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT);
 }
 

@@ -40,6 +40,8 @@
     </None>
     <None Include="Shaders\simple_triangle2.frag" />
     <None Include="Shaders\simple_triangle2.vert" />
+    <None Include="Shaders\opacity_lerp_triangle.frag" />
+    <None Include="Shaders\opacity_lerp_triangle.vert" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Rendering\Window.h">

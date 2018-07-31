@@ -82,22 +82,26 @@ void Shader::compileShaders()
 /* Assign our program handle a "name" */
 GLuint Shader::createProgram()
 {
-	GLuint shaderprogram = glCreateProgram();
+	m_shaderprogram = glCreateProgram();
 
 	/* Attach our shaders to our program */
-	glAttachShader(shaderprogram, m_vertexShader);
-	glAttachShader(shaderprogram, m_fragmentShader);
+	glAttachShader(m_shaderprogram, m_vertexShader);
+	glAttachShader(m_shaderprogram, m_fragmentShader);
 
 	/* Bind attribute index 0 (coordinates) to in_Position and attribute index 1 (color) to in_Color */
 	/* Attribute locations must be setup before calling glLinkProgram. */
-	glBindAttribLocation(shaderprogram, 0, "in_Position");
-	glBindAttribLocation(shaderprogram, 1, "in_Color");
+	glBindAttribLocation(m_shaderprogram, 0, "in_Position");
+	glBindAttribLocation(m_shaderprogram, 1, "in_Color");
+	glLinkProgram(m_shaderprogram);
 
-	/* Link our program */
-	/* At this stage, the vertex and fragment programs are inspected, optimized and a binary code is generated for the shader. */
-	/* The binary code is uploaded to the GPU, if there is no error. */
-	glLinkProgram(shaderprogram);
 	/* Load the shader into the rendering pipeline */
 
-	return shaderprogram;
+	return m_shaderprogram;
+}
+
+//utility uniform functions
+//----------------------------------------------------------------------
+void Shader::setFloat(const std::string &name, float value) const
+{
+	glUniform1f(glGetUniformLocation(m_shaderprogram, name.c_str()), value);
 }
