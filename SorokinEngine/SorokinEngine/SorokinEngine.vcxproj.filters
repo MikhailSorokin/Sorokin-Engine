@@ -24,34 +24,65 @@
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Rendering\Model.cpp">
+    <ClCompile Include="Shaders\Shader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Shaders\Shader.cpp">
+    <ClCompile Include="Utilities\stb_image.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\Loader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\Model.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\TexturedModel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Shaders\simple_triangle.frag">
+    <None Include="Shaders\Fragment\opacity_lerp_triangle.frag" />
+    <None Include="Shaders\Fragment\simple_triangle.frag">
       <Filter>Source Files</Filter>
     </None>
-    <None Include="Shaders\simple_triangle.vert">
+    <None Include="Shaders\Fragment\simple_triangle2.frag" />
+    <None Include="Shaders\Vertex\opacity_lerp_triangle.vert" />
+    <None Include="Shaders\Vertex\simple_triangle.vert">
       <Filter>Source Files</Filter>
     </None>
-    <None Include="Shaders\simple_triangle2.frag" />
-    <None Include="Shaders\simple_triangle2.vert" />
-    <None Include="Shaders\opacity_lerp_triangle.frag" />
-    <None Include="Shaders\opacity_lerp_triangle.vert" />
+    <None Include="Shaders\Vertex\simple_triangle2.vert" />
+    <None Include="Shaders\Fragment\simple_quad.frag" />
+    <None Include="Shaders\Vertex\simple_quad.vert" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Rendering\Window.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Rendering\Model.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Shaders\Shader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Utilities\FileSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\stb_image.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\Loader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\Model.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\TexturedModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Textures\dank.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Textures\dank.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

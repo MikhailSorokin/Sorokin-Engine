@@ -124,22 +124,35 @@
   <ItemGroup>
     <ClCompile Include="..\..\glad\src\glad.c" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Rendering\Model.cpp" />
+    <ClCompile Include="Models\Model.cpp" />
+    <ClCompile Include="Models\TexturedModel.cpp" />
     <ClCompile Include="Rendering\Window.cpp" />
     <ClCompile Include="Shaders\Shader.cpp" />
+    <ClCompile Include="Utilities\Loader.cpp" />
+    <ClCompile Include="Utilities\stb_image.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Shaders\opacity_lerp_triangle.frag" />
-    <None Include="Shaders\opacity_lerp_triangle.vert" />
-    <None Include="Shaders\simple_triangle.frag" />
-    <None Include="Shaders\simple_triangle.vert" />
-    <None Include="Shaders\simple_triangle2.frag" />
-    <None Include="Shaders\simple_triangle2.vert" />
+    <None Include="Shaders\Fragment\opacity_lerp_triangle.frag" />
+    <None Include="Shaders\Fragment\simple_quad.frag" />
+    <None Include="Shaders\Vertex\opacity_lerp_triangle.vert" />
+    <None Include="Shaders\Fragment\simple_triangle.frag" />
+    <None Include="Shaders\Vertex\simple_quad.vert" />
+    <None Include="Shaders\Vertex\simple_triangle.vert" />
+    <None Include="Shaders\Fragment\simple_triangle2.frag" />
+    <None Include="Shaders\Vertex\simple_triangle2.vert" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Rendering\Model.h" />
+    <ClInclude Include="Models\TexturedModel.h" />
+    <ClInclude Include="Utilities\FileSystem.h" />
+    <ClInclude Include="Models\Model.h" />
     <ClInclude Include="Rendering\Window.h" />
     <ClInclude Include="Shaders\Shader.h" />
+    <ClInclude Include="Utilities\Loader.h" />
+    <ClInclude Include="Utilities\stb_image.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Textures\dank.jpg" />
+    <Image Include="Textures\dank.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

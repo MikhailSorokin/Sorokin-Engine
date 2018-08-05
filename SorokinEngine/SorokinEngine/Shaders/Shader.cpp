@@ -105,3 +105,6 @@ void Shader::setFloat(const std::string &name, float value) const
 {
 	glUniform1f(glGetUniformLocation(m_shaderprogram, name.c_str()), value);
 }
+
+//glUniform4f(vertexColorLocation, 0.0f, green, 0.0f, 1.f);
+//exampleShader->setFloat("deltaOffset", offset);
