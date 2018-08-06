@@ -81,8 +81,5 @@
     <Image Include="Textures\dank.jpg">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="Textures\dank.png">
-      <Filter>Resource Files</Filter>
-    </Image>
   </ItemGroup>
 </Project>

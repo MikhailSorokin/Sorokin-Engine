@@ -3,16 +3,14 @@
 
 #pragma once
 
-class TexturedModel : Model
+class TexturedModel : public Model
 {
 	public:
-		TexturedModel(const char* inPath, const std::vector<float>& vertices, const std::vector<int>& indices);
+		TexturedModel(const char* inPath, const std::vector<float>& vertices, const std::vector<int>& indices, bool usingTransparency = false);
 		void init();
 		unsigned int getTextureID();
-		unsigned int getCurrentVAO();
-		void cleanUp();
 
-protected:
+	protected:
 		const char* m_Path;
 		unsigned char m_texture;
 };

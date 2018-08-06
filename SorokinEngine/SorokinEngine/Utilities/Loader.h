@@ -1,19 +1,21 @@
 ﻿#pragma once
 #include <vector>
+#include <glad/glad.h>
+#include <iostream>
 
 class Loader
 {
 	public:
-		Loader(const std::vector<float>& vertices, const std::vector<int>& indices);
 		void createAttributes(const std::vector<float>& vertices, const std::vector<int>& indices);
 		void bindVAO(int VAO);
 		void deleteAttribute();
 
-		unsigned int getVAO();
+		unsigned int getVAO(int index);
+
+		unsigned int getCurrVAOIndex();
 
 	private:
 		//TODO - Change later to include a lot of objects
-		unsigned int VBOs[3];
-		unsigned int VAO, EBO;
-
+		unsigned int VAOs[1], EBO, VBO;
+		static unsigned int currentVAOIndex;
 };

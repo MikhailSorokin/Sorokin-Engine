@@ -1,9 +1,10 @@
 #include "Model.h"
 
-Model::Model(const std::vector<float>& vertices, const std::vector<int>& indices) : m_loader(vertices, indices)
+Model::Model(const std::vector<float>& vertices, const std::vector<int>& indices, bool usingTransparency)
 {
 	m_vertices = vertices;
 	m_indices = indices;
+	m_usingTransparency = usingTransparency;
 }
 
 //Does something crazy with vertex and fragment shaders.

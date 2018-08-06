@@ -152,7 +152,6 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="Textures\dank.jpg" />
-    <Image Include="Textures\dank.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

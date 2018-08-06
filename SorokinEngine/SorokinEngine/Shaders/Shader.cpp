@@ -92,6 +92,7 @@ GLuint Shader::createProgram()
 	/* Attribute locations must be setup before calling glLinkProgram. */
 	glBindAttribLocation(m_shaderprogram, 0, "in_Position");
 	glBindAttribLocation(m_shaderprogram, 1, "in_Color");
+	glBindAttribLocation(m_shaderprogram, 2, "in_TexCoord");
 	glLinkProgram(m_shaderprogram);
 
 	/* Load the shader into the rendering pipeline */
@@ -104,6 +105,22 @@ GLuint Shader::createProgram()
 void Shader::setFloat(const std::string &name, float value) const
 {
 	glUniform1f(glGetUniformLocation(m_shaderprogram, name.c_str()), value);
+}
+
+void Shader::setDouble(const std::string &name, double value) const
+{
+	glUniform1i(glGetUniformLocation(m_shaderprogram, name.c_str()), value);
+}
+
+void Shader::setInt(const std::string &name, int value) const
+{
+	glUniform1i(glGetUniformLocation(m_shaderprogram, name.c_str()), value);
+}
+
+
+void Shader::setMatrix4f(const std::string &name, glm::mat4 value) const
+{
+	glUniformMatrix4fv(glGetUniformLocation(m_shaderprogram, name.c_str()), 1, GL_FALSE, glm::value_ptr(value));
 }
 
 //glUniform4f(vertexColorLocation, 0.0f, green, 0.0f, 1.f);

@@ -14,6 +14,8 @@ class Window {
 		void processInput(GLFWwindow * window);
 		void clear();
 
+		float getUpdatingOpacityChange();
+
 	protected:
 		int m_width;
 		int m_height;
@@ -21,4 +23,5 @@ class Window {
 		const char* m_name;
 
 		GLFWwindow* m_window;
+		double blendValue;
 };

@@ -7,8 +7,11 @@ out vec4 gl_FragColor;
 in vec3 outColor;
 in vec2 outTexCoord;
 
-uniform sampler2D ourTexture;
+uniform sampler2D ourTexture1;
+uniform sampler2D ourTexture2;
+
+uniform float blendValue;
 
 void main() {
-	gl_FragColor = texture(ourTexture, outTexCoord) * outColor.y;
+	gl_FragColor = mix(texture(ourTexture1, outTexCoord),  texture(ourTexture2, vec2(1.0 - outTexCoord.x, outTexCoord.y),  texture(ourTexture2, outTexCoord).a * blendValue), blendValue);
 }
