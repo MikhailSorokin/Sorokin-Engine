@@ -6,6 +6,11 @@ TexturedModel::TexturedModel(const char* inPath, const std::vector<float>& verti
 	m_Path = inPath;
 }
 
+TexturedModel::TexturedModel(const char* inPath, const std::vector<float>& vertices, bool usingTransparency) : Model(vertices, usingTransparency)
+{
+	m_Path = inPath;
+}
+
 void TexturedModel::init()
 {
 	unsigned int texture;

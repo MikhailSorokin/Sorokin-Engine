@@ -6,6 +6,7 @@
 class Loader
 {
 	public:
+		void createAttributes(const std::vector<float>& vertices);
 		void createAttributes(const std::vector<float>& vertices, const std::vector<int>& indices);
 		void bindVAO(int VAO);
 		void deleteAttribute();

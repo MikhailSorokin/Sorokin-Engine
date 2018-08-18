@@ -91,8 +91,8 @@ GLuint Shader::createProgram()
 	/* Bind attribute index 0 (coordinates) to in_Position and attribute index 1 (color) to in_Color */
 	/* Attribute locations must be setup before calling glLinkProgram. */
 	glBindAttribLocation(m_shaderprogram, 0, "in_Position");
-	glBindAttribLocation(m_shaderprogram, 1, "in_Color");
-	glBindAttribLocation(m_shaderprogram, 2, "in_TexCoord");
+	//glBindAttribLocation(m_shaderprogram, 1, "in_Color");
+	glBindAttribLocation(m_shaderprogram, 1, "in_TexCoord");
 	glLinkProgram(m_shaderprogram);
 
 	/* Load the shader into the rendering pipeline */

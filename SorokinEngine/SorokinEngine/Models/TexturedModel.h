@@ -7,6 +7,7 @@ class TexturedModel : public Model
 {
 	public:
 		TexturedModel(const char* inPath, const std::vector<float>& vertices, const std::vector<int>& indices, bool usingTransparency = false);
+		TexturedModel(const char * inPath, const std::vector<float>& vertices, bool usingTransparency = false);
 		void init();
 		unsigned int getTextureID();
 

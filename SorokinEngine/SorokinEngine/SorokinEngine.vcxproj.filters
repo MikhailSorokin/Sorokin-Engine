@@ -53,6 +53,8 @@
     <None Include="Shaders\Vertex\simple_triangle2.vert" />
     <None Include="Shaders\Fragment\simple_quad.frag" />
     <None Include="Shaders\Vertex\simple_quad.vert" />
+    <None Include="Shaders\Fragment\cube.frag" />
+    <None Include="Shaders\Vertex\cube.vert" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Rendering\Window.h">

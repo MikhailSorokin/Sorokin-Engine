@@ -16,6 +16,9 @@ class Window {
 
 		float getUpdatingOpacityChange();
 
+		int getWidth();
+		int getHeight();
+
 	protected:
 		int m_width;
 		int m_height;

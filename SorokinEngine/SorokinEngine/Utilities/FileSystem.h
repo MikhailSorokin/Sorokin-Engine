@@ -43,6 +43,28 @@ private:
 		return "../../../" + path;
 	}
 
+	//Important, print with .c_str()
+	std::string reverseString(std::string s) {
+		char* reversedPointer = &s[0];
+
+		int counter = 0;
+		while (reversedPointer[counter] != '\0') {
+			counter++;
+		}
+
+		counter--;
+
+		std::string reversedString;
+		while (counter >= 0) {
+			reversedString += reversedPointer[counter];
+			counter--;
+		}
+
+		return reversedString;
+	}
+
+
+
 
 };
 

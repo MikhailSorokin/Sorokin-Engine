@@ -37,6 +37,8 @@ void Window::create()
 
 	glfwSetFramebufferSizeCallback(m_window, framebuffer_size_callback);
 
+	glEnable(GL_DEPTH_TEST);
+
 	glViewport(0, 0, m_width, m_height);
 }
 
@@ -75,7 +77,7 @@ void Window::clear()
 {
 	//Have to clear the buffer bit so that we refresh rendering the graphics every frame
 	glClearColor(0, 0.2f, 1.0f, 1.0f);
-	glClear(GL_COLOR_BUFFER_BIT);
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 }
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
@@ -86,4 +88,14 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 float Window::getUpdatingOpacityChange()
 {
 	return blendValue;
+}
+
+int Window::getWidth()
+{
+	return m_width;
+}
+
+int Window::getHeight()
+{
+	return m_width;
 }

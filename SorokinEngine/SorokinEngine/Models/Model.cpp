@@ -7,6 +7,12 @@ Model::Model(const std::vector<float>& vertices, const std::vector<int>& indices
 	m_usingTransparency = usingTransparency;
 }
 
+Model::Model(const std::vector<float>& vertices, bool usingTransparency)
+{
+	m_vertices = vertices;
+	m_usingTransparency = usingTransparency;
+}
+
 //Does something crazy with vertex and fragment shaders.
 void Model::specialFunction()
 {
