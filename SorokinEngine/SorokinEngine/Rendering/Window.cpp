@@ -2,6 +2,17 @@
 #include <iostream>
 #include <algorithm>
 
+float Window::lastX = 0.f;
+float Window::lastY = 0.f;
+float Window::deltaPitch = 0.f;
+float Window::deltaYaw = 0.f;
+
+float Window::deltaTime = 0.f;
+float Window::lastTime = 0.f;
+
+float Window::FOV = 45.f;
+
+bool Window::bSetup = false;
 
 //Called whenever the window is resized with the mouse or other inputs
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
@@ -12,7 +23,10 @@ Window::Window(const int width, const int height, const char* name)
 	m_height = height;
 	m_name = name;
 
-	blendValue = 1.f;
+	lastX = width / 2;
+	lastY = height / 2;
+
+	blendValue = 0.5f;
 }
 
 Window::~Window()
@@ -36,8 +50,14 @@ void Window::create()
 	glfwMakeContextCurrent(m_window);
 
 	glfwSetFramebufferSizeCallback(m_window, framebuffer_size_callback);
+	glfwSetInputMode(m_window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+
+	glfwSetCursorPosCallback(m_window, &Window::mouse_callback);
+	glfwSetScrollCallback(m_window, &Window::scroll_callback);
 
 	glEnable(GL_DEPTH_TEST);
+
+
 
 	glViewport(0, 0, m_width, m_height);
 }
@@ -60,17 +80,29 @@ void Window::processInput(GLFWwindow *window)
 	if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
 		glfwSetWindowShouldClose(window, true);
 
-	if (glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS)
+
+	float currentTime = glfwGetTime();
+	deltaTime = currentTime - lastTime;
+	lastTime = currentTime;
+
+	float cameraSpeed = 2.5f * deltaTime;
+	deltaZ = 0.f;
+	deltaX = 0.f;
+
+	if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
 	{
-		blendValue += (0.01f);
-		blendValue = std::min(blendValue, 1.0);
+		deltaZ = cameraSpeed;
+	} if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
+	{
+		deltaZ = -cameraSpeed;
+	} if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
+	{
+		deltaX = -cameraSpeed;
+	} if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
+	{
+		deltaX = cameraSpeed;
 	}
 
-	if (glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS)
-	{
-		blendValue -= (0.01f);
-		blendValue = std::max(blendValue, 0.0);
-	}
 }
 
 void Window::clear()
@@ -83,6 +115,43 @@ void Window::clear()
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
 	glViewport(0, 0, width, height);
+}
+
+void Window::mouse_callback(GLFWwindow * window, double xPos, double yPos)
+{
+	if (!bSetup) {
+		lastX = xPos;
+		lastY = yPos;
+		bSetup = true;
+	}
+
+	float offsetX = lastX - xPos;
+	float offsetY = lastY - yPos;
+
+	lastX = xPos;
+	lastY = yPos;
+
+	float sensitivity = 0.009f;
+	offsetX *= sensitivity;
+	offsetY *= sensitivity;
+
+	deltaYaw += offsetX;
+	deltaPitch += offsetY;
+
+	if (deltaPitch > 89.0f)
+		deltaPitch = 89.0f;
+	if (deltaPitch < -89.0f)
+		deltaPitch = -89.0f;
+}
+
+void Window::scroll_callback(GLFWwindow * window, double xoffset, double yoffset)
+{
+	if (FOV >= 1.0f && FOV <= 45.0f)
+		FOV -= yoffset;
+	if (FOV <= 1.0f)
+		FOV = 1.0f;
+	if (FOV >= 45.0f)
+		FOV = 45.0f;
 }
 
 float Window::getUpdatingOpacityChange()

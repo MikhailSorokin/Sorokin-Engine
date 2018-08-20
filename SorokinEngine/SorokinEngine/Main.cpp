@@ -5,6 +5,9 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
+#define _USE_MATH_DEFINES
+#include <math.h>
+
 //My class includes
 #include "Rendering/Window.h"
 #include <iostream>
@@ -95,29 +98,37 @@ int main() {
 	exampleShader->setInt("ourTexture1", 0);
 	exampleShader->setInt("ourTexture2", 1);
 
-
+	glm::vec3 cameraPos = glm::vec3(0.f, 0.f, -3.f);
+	glm::vec3 cameraFront = glm::vec3(0.f, 0.f, 1.f);
+	glm::vec3 cameraUp = glm::vec3(0.f, 1.f, 0.f);
 	/* ========================== Renderer (OWN CLASS) ============================== */
 	while (!window.closed())
 	{
 		window.clear();
 
-
-		glm::mat4 model = glm::mat4(1.0);
-		model = glm::rotate(model, glm::radians(-55.0f), glm::vec3(1.0f, 0.0f, 0.0f));
-		model = glm::rotate(model, (float)glfwGetTime(), glm::vec3(0.f, 0.f, 1.0f));
-		model = glm::translate(model, glm::vec3(0.f, 0.f, 25.f * glm::radians(sin(glfwGetTime()))));
-
 		glm::mat4 view = glm::mat4(1.0);
-		view = glm::translate(view, glm::vec3(0.f, 0.f, -3.f));
 
-		glm::mat4 proj = glm::perspective(glm::radians(45.0f), (float)window.getWidth() / (float)window.getHeight(), 0.1f, 100.0f);
+		cameraFront.x = sin(glm::radians(window.deltaYaw)) * cos(glm::radians(window.deltaPitch));
+		cameraFront.y = sin(glm::radians(window.deltaPitch));
+		cameraFront.z = cos(glm::radians(window.deltaYaw)) * cos(glm::radians(window.deltaPitch));
+
+		glm::vec3 FPSFront = glm::vec3(cameraFront.x, 0.f, cameraFront.z);
+		cameraPos += window.deltaZ * FPSFront; //FPSFront camera for FPS style, use cameraFront to use flying style camera
+		cameraPos += window.deltaX * glm::normalize(glm::cross(cameraFront, cameraUp));
+
+		view = glm::lookAt(cameraPos, cameraPos + cameraFront, cameraUp);
+
+		glm::mat4 proj = glm::perspective(glm::radians(Window::FOV), (float)window.getWidth() / (float)window.getHeight(), 0.1f, 100.0f);
 
 
 		/*============================= RENDERING ======================================== */
+
+
+
+
 		// draw first triangle using the data from the first VAO
 
 		exampleShader->setFloat("blendValue", window.getUpdatingOpacityChange());
-		exampleShader->setMatrix4f("model", model);
 		exampleShader->setMatrix4f("view", view);
 		exampleShader->setMatrix4f("projection", proj);
 
@@ -131,19 +142,33 @@ int main() {
 		glUseProgram(shaderProgramExampleID);
 
 		glBindVertexArray(VAO);
-		glDrawArrays(GL_TRIANGLES, 0, 36);
-		//for (unsigned int i = 0; i < 10; i++)
-		//{
-		//	glm::mat4 model = glm::mat4(1.0);
-		//	model = glm::translate(model, cubePositions[i]);
-		//	float angle = 20.0f * i;
-		//	model = glm::rotate(model, glm::radians(angle), glm::vec3(1.0f, 0.3f, 0.5f));
-		//	exampleShader->setMatrix4f("model", model);
+		
+		glm::vec3 cubePositions[] = {
+		  glm::vec3(0.0f,  0.0f,  0.0f),
+		  glm::vec3(2.0f,  5.0f, -15.0f),
+		  glm::vec3(-1.5f, -2.2f, -2.5f),
+		  glm::vec3(-3.8f, -2.0f, -12.3f),
+		  glm::vec3(2.4f, -0.4f, -3.5f),
+		  glm::vec3(-1.7f,  3.0f, -7.5f),
+		  glm::vec3(1.3f, -2.0f, -2.5f),
+		  glm::vec3(1.5f,  2.0f, -2.5f),
+		  glm::vec3(1.5f,  0.2f, -1.5f),
+		  glm::vec3(-1.3f,  1.0f, -1.5f)
+				};
 
-		//	glDrawArrays(GL_TRIANGLES, 0, 36);
-		//}
+		for (unsigned int i = 0; i < 10; i++)
+		{
+			glm::mat4 model = glm::mat4(1.0);
+			model = glm::translate(model, cubePositions[i]);
+			float angle = 20.0f * i;
+			if (i % 3 == 0)  // every 3rd iteration (including the first) we set the angle using GLFW's time function.
+				angle = glfwGetTime() * 25.0f;
+			model = glm::rotate(model, glm::radians(angle), glm::vec3(1.0f, 0.3f, 0.5f));
+			exampleShader->setMatrix4f("model", model);
 
-		//glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+			glDrawArrays(GL_TRIANGLES, 0, 36);
+		}
+
 		/*============================= END RENDERING ======================================== */
 
 		window.update();

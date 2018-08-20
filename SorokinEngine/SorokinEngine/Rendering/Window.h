@@ -19,12 +19,33 @@ class Window {
 		int getWidth();
 		int getHeight();
 
+		//TODO - Move into own class
+		float deltaX;
+		float deltaZ;
+
+		static float deltaYaw;
+		static float deltaPitch;
+
+		static float deltaTime;
+		static float lastTime;
+
+		static float FOV;
+
+
+		GLFWwindow* m_window;
+
 	protected:
 		int m_width;
 		int m_height;
 
+		static float lastX;
+		static float lastY;
+		static bool bSetup;
+
+		static void mouse_callback(GLFWwindow* window, double xPos, double yPos);
+		static void scroll_callback(GLFWwindow* window, double xPos, double yPos);
+
 		const char* m_name;
 
-		GLFWwindow* m_window;
 		double blendValue;
 };
