@@ -22,32 +22,32 @@
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}</ProjectGuid>
     <RootNamespace>SorokinEngine</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -133,9 +133,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Shaders\Fragment\cube.frag" />
+    <None Include="Shaders\Fragment\cube_chunk.frag" />
     <None Include="Shaders\Fragment\opacity_lerp_triangle.frag" />
     <None Include="Shaders\Fragment\simple_quad.frag" />
     <None Include="Shaders\Vertex\cube.vert" />
+    <None Include="Shaders\Vertex\cube_chunk.vert" />
     <None Include="Shaders\Vertex\opacity_lerp_triangle.vert" />
     <None Include="Shaders\Fragment\simple_triangle.frag" />
     <None Include="Shaders\Vertex\simple_quad.vert" />
@@ -145,6 +147,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Models\TexturedModel.h" />
+    <ClInclude Include="Rendering\Chunk.h" />
     <ClInclude Include="Utilities\FileSystem.h" />
     <ClInclude Include="Models\Model.h" />
     <ClInclude Include="Rendering\Window.h" />

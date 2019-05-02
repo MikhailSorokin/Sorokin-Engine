@@ -1,3 +1,2 @@
 ﻿  Main.cpp
-d:\sorokin-engine\sorokinengine\sorokinengine\main.cpp(165): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-  SorokinEngine.vcxproj -> D:\Sorokin-Engine\SorokinEngine\Debug\SorokinEngine.exe
+  SorokinEngine.vcxproj -> M:\Sorokin-Engine\SorokinEngine\Debug\SorokinEngine.exe

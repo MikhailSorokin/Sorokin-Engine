@@ -55,6 +55,8 @@
     <None Include="Shaders\Vertex\simple_quad.vert" />
     <None Include="Shaders\Fragment\cube.frag" />
     <None Include="Shaders\Vertex\cube.vert" />
+    <None Include="Shaders\Fragment\cube_chunk.frag" />
+    <None Include="Shaders\Vertex\cube_chunk.vert" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Rendering\Window.h">
@@ -76,6 +78,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Models\TexturedModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\Chunk.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
