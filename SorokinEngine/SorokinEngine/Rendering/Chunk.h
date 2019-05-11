@@ -9,19 +9,42 @@
  * will be represented in a collection of cubes. */
 struct chunk {
 
+	//Array of bytes reduces memory usage
 	uint8_t blk[CX][CY][CZ];
 	GLuint vbo;
 	bool changed;
 	int elements;
+	glm::vec3 chunkPos;
+	unsigned int VAOs[1];
 
-	chunk() {
+	//If not active, don't render this chunk
+	bool bIsActive;
+
+	chunk(int x, int y, int z) {
 		memset(blk, 0, sizeof(blk));
 		//Generates space for a vbo
 		glGenBuffers(1, &vbo);
+
 		elements = 0;
+		changed = true;
+
+		chunkPos = glm::vec3(x, y, z);
+		createChunk();
+	}
+
+	void createChunk() {
+		for (int x = 0; x < CX; x++) {
+			for (int y = 0; y < CY; y++) {
+				for (int z = 0; z < CZ; z++) {
+					//We will just assume 1 is "grass" texture
+					set(x, y, z, 1);
+				}
+			}
+		}
 	}
 
 	~chunk() {
+		glDeleteVertexArrays(1, &VAOs[0]);
 		glDeleteBuffers(1, &vbo);
 	}
 
@@ -31,17 +54,23 @@ struct chunk {
 
 	void set(int x, int y, int z, uint8_t type) {
 		blk[x][y][z] = type;
-		changed = true;
 	}
 
 	typedef glm::tvec4<GLbyte> byte4;
 
+	/*byte4[] createTriangleVertices(int x, int y, int z) {
+
+	}*/
+
 	void update() {
-		changed = false;
+
+		//We multiply by 6 for every triangle needed
+		//Multiply by 6 again for (+x, -x, -y, +y, -z, +z) - 6 faces
 
 		byte4 vertex[CX * CY * CZ * 6 * 6];
 		int i = 0;
 
+		//Builds this right off the origin
 		for (int x = 0; x < CX; x++) {
 			for (int y = 0; y < CY; y++) {
 				for (int z = 0; z < CZ; z++) {
@@ -50,42 +79,125 @@ struct chunk {
 					if (!type)
 						continue;
 
-					bool[6] faceFlags = {
-							blocks[getIndex(x, y, z - 1)] == 0, // north face
-							blocks[getIndex(x, y, z + 1)] == 0, // south face
-							blocks[getIndex(x + 1, y, z)] == 0, // east face
-							blocks[getIndex(x - 1, y, z)] == 0, // west face
-							blocks[getIndex(x, y + 1, z)] == 0, // top face
-							blocks[getIndex(x, y - 1, z)] == 0, // bottom face
-					};
-
-					//View from negative x
+					//View from negative x (back)
 					vertex[i++] = byte4(x, y, z, type);
 					vertex[i++] = byte4(x, y, z + 1, type);
 					vertex[i++] = byte4(x, y + 1, z, type);
 					vertex[i++] = byte4(x, y + 1, z, type);
 					vertex[i++] = byte4(x, y, z + 1, type);
 					vertex[i++] = byte4(x, y + 1, z + 1, type);
+				}
+			}
+		}
+		//Builds this right off the origin
+		for (int x = 0; x < CX; x++) {
+			for (int y = 0; y < CY; y++) {
+				for (int z = 0; z < CZ; z++) {
+					uint8_t type = blk[x][y][z];
 
-					//View from positive x
+					if (!type)
+						continue;
+
+					//View from positive x (front)
 					vertex[i++] = byte4(x + 1, y, z, type);
 					vertex[i++] = byte4(x + 1, y + 1, z, type);
 					vertex[i++] = byte4(x + 1, y, z + 1, type);
 					vertex[i++] = byte4(x + 1, y + 1, z, type);
 					vertex[i++] = byte4(x + 1, y + 1, z + 1, type);
 					vertex[i++] = byte4(x + 1, y, z + 1, type);
-
-
-					std::cout << i << std::endl;
 				}
 			}
 		}
 
+		//Builds this right off the origin
+		for (int x = 0; x < CX; x++) {
+			for (int y = 0; y < CY; y++) {
+				for (int z = 0; z < CZ; z++) {
+					uint8_t type = blk[x][y][z];
+
+					if (!type)
+						continue;
+
+					//View from negative y (bottom)
+					vertex[i++] = byte4(x, y, z, type);
+					vertex[i++] = byte4(x + 1, y, z, type);
+					vertex[i++] = byte4(x, y, z + 1, type);
+					vertex[i++] = byte4(x + 1, y, z, type);
+					vertex[i++] = byte4(x + 1, y, z + 1, type);
+					vertex[i++] = byte4(x, y, z + 1, type);
+				}
+			}
+		}
+
+		//Builds this right off the origin
+		for (int x = 0; x < CX; x++) {
+			for (int y = 0; y < CY; y++) {
+				for (int z = 0; z < CZ; z++) {
+					uint8_t type = blk[x][y][z];
+
+					if (!type)
+						continue;
+
+					//View from positive y (top)
+					vertex[i++] = byte4(x, y + 1, z, type);
+					vertex[i++] = byte4(x, y + 1, z + 1, type);
+					vertex[i++] = byte4(x + 1, y + 1, z, type);
+					vertex[i++] = byte4(x + 1, y + 1, z, type);
+					vertex[i++] = byte4(x, y + 1, z + 1, type);
+					vertex[i++] = byte4(x + 1, y + 1, z + 1, type);
+				}
+			}
+		}
+
+		//Builds this right off the origin
+		for (int x = 0; x < CX; x++) {
+			for (int y = 0; y < CY; y++) {
+				for (int z = 0; z < CZ; z++) {
+					uint8_t type = blk[x][y][z];
+
+					if (!type)
+						continue;
+
+					//View from negative z (left)
+					vertex[i++] = byte4(x, y, z, type);
+					vertex[i++] = byte4(x, y + 1, z, type);
+					vertex[i++] = byte4(x + 1, y, z, type);
+					vertex[i++] = byte4(x, y + 1, z, type);
+					vertex[i++] = byte4(x + 1, y + 1, z, type);
+					vertex[i++] = byte4(x + 1, y, z, type);
+
+				}
+			}
+		}
+
+		//Builds this right off the origin
+		for (int x = 0; x < CX; x++) {
+			for (int y = 0; y < CY; y++) {
+				for (int z = 0; z < CZ; z++) {
+					uint8_t type = blk[x][y][z];
+
+					if (!type)
+						continue;
+
+					//View from positive z (right)
+					vertex[i++] = byte4(x, y, z + 1, type);
+					vertex[i++] = byte4(x + 1, y, z + 1, type);
+					vertex[i++] = byte4(x, y + 1, z + 1, type);
+					vertex[i++] = byte4(x, y + 1, z + 1, type);
+					vertex[i++] = byte4(x + 1, y, z + 1, type);
+					vertex[i++] = byte4(x + 1, y + 1, z + 1, type);
+				}
+			}
+		}
+
+		changed = false;
 		elements = i;
 		
-		std::cout << elements << std::endl;
+		std::cout << "Num elements: " << elements << std::endl;
+
+		//Upload vertices
 		glBindBuffer(GL_ARRAY_BUFFER, vbo);
-		glBufferData(GL_ARRAY_BUFFER, elements * sizeof * vertex, vertex, GL_STATIC_DRAW);
+		glBufferData(GL_ARRAY_BUFFER, i * sizeof *vertex, vertex, GL_STATIC_DRAW);
 	}
 
 	void render() {
@@ -101,4 +213,6 @@ struct chunk {
 		glVertexAttribPointer(0, 4, GL_BYTE, GL_FALSE, 0, 0);
 		glDrawArrays(GL_TRIANGLES, 0, elements);
 	}
+
+	//TODO - rebuild function (when moving)
 };

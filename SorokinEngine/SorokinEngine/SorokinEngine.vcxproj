@@ -123,13 +123,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\glad\src\glad.c" />
+    <ClCompile Include="Textures\Font.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Models\Model.cpp" />
     <ClCompile Include="Models\TexturedModel.cpp" />
     <ClCompile Include="Rendering\Window.cpp" />
     <ClCompile Include="Shaders\Shader.cpp" />
+    <ClCompile Include="Tile.cpp" />
     <ClCompile Include="Utilities\Loader.cpp" />
     <ClCompile Include="Utilities\stb_image.cpp" />
+    <ClCompile Include="Rendering\World\World.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Shaders\Fragment\cube.frag" />
@@ -146,14 +149,17 @@
     <None Include="Shaders\Vertex\simple_triangle2.vert" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Textures\Font.h" />
     <ClInclude Include="Models\TexturedModel.h" />
     <ClInclude Include="Rendering\Chunk.h" />
+    <ClInclude Include="Tile.h" />
     <ClInclude Include="Utilities\FileSystem.h" />
     <ClInclude Include="Models\Model.h" />
     <ClInclude Include="Rendering\Window.h" />
     <ClInclude Include="Shaders\Shader.h" />
     <ClInclude Include="Utilities\Loader.h" />
     <ClInclude Include="Utilities\stb_image.h" />
+    <ClInclude Include="Rendering\World\World.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Textures\dank.jpg" />

@@ -18,7 +18,7 @@
 
 int main() {
 	//Window must be loaded before gladLoadGLLoader is called!
-	Window window(1080, 720, "SirrockinEngine");
+	Window window(1280, 720, "SirrockinEngine");
 	window.create();
 
 	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
@@ -27,18 +27,18 @@ int main() {
 		return -1;
 	}
 
-	chunk cube_chunk;
+	chunk cube_chunk(4, 0, 10);
 
 	/* ============================ LOAD the SHADERS here (to be loaded in their own class) ==================================== */
 	Shader* chunkShaders = new Shader("Shaders/Vertex/cube_chunk.vert", "Shaders/Fragment/cube_chunk.frag");
 	chunkShaders->compileShaders();
-	GLuint shaderProgramExampleID = chunkShaders->createProgram();
+	GLuint chunkProgramID = chunkShaders->createProgram();
 
 	//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 
-	glUseProgram(shaderProgramExampleID);
-	chunkShaders->setInt("ourTexture1", 0);
-	chunkShaders->setInt("ourTexture2", 1);
+	glUseProgram(chunkProgramID);
+
+	glEnableVertexAttribArray(0);
 
 	glm::vec3 cameraPos = glm::vec3(0.f, 0.f, -3.f);
 	glm::vec3 cameraFront = glm::vec3(0.f, 0.f, 1.f);
@@ -71,18 +71,17 @@ int main() {
 		// draw first triangle using the data from the first VAO
 
 
+		chunkShaders->setMatrix4f("view", view);
+		chunkShaders->setMatrix4f("projection", proj);
+
 		glm::mat4 model = glm::mat4(1.0);
 		model = glm::translate(model, glm::vec3(0, 0, 0));
 
 		chunkShaders->setMatrix4f("model", model);
-		chunkShaders->setMatrix4f("view", view);
-		chunkShaders->setMatrix4f("projection", proj);
 
-
-		glUseProgram(shaderProgramExampleID);
+		glUseProgram(chunkProgramID);
 
 		//Chunk stuff here
-		cube_chunk.set(0, 0, 0, 1);
 		cube_chunk.render();
 
 
