@@ -31,6 +31,8 @@ class Window {
 
 		static float FOV;
 
+		static float keyboardSpeed;
+
 
 		GLFWwindow* m_window;
 

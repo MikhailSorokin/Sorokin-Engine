@@ -12,6 +12,8 @@ float Window::lastTime = 0.f;
 
 float Window::FOV = 45.f;
 
+float Window::keyboardSpeed = 25.f;
+
 bool Window::bSetup = false;
 
 //Called whenever the window is resized with the mouse or other inputs
@@ -85,7 +87,7 @@ void Window::processInput(GLFWwindow *window)
 	deltaTime = currentTime - lastTime;
 	lastTime = currentTime;
 
-	float cameraSpeed = 2.5f * deltaTime;
+	float cameraSpeed = keyboardSpeed * deltaTime;
 	deltaZ = 0.f;
 	deltaX = 0.f;
 

@@ -41,20 +41,8 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Shaders\Fragment\opacity_lerp_triangle.frag" />
-    <None Include="Shaders\Fragment\simple_triangle.frag">
-      <Filter>Source Files</Filter>
-    </None>
-    <None Include="Shaders\Fragment\simple_triangle2.frag" />
-    <None Include="Shaders\Vertex\opacity_lerp_triangle.vert" />
-    <None Include="Shaders\Vertex\simple_triangle.vert">
-      <Filter>Source Files</Filter>
-    </None>
-    <None Include="Shaders\Vertex\simple_triangle2.vert" />
-    <None Include="Shaders\Fragment\simple_quad.frag" />
-    <None Include="Shaders\Vertex\simple_quad.vert" />
-    <None Include="Shaders\Fragment\cube.frag" />
-    <None Include="Shaders\Vertex\cube.vert" />
+    <None Include="Shaders\Vertex\chunk.vert" />
+    <None Include="Shaders\Fragment\chunk.frag" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Rendering\Window.h">
@@ -76,6 +64,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Models\TexturedModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\chunk.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Rendering\Mesh.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

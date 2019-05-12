@@ -1,12 +1,7 @@
 ﻿#include "TexturedModel.h"
 
 
-TexturedModel::TexturedModel(const char* inPath, const std::vector<float>& vertices, const std::vector<int>& indices, bool usingTransparency) : Model(vertices, indices, usingTransparency)
-{
-	m_Path = inPath;
-}
-
-TexturedModel::TexturedModel(const char* inPath, const std::vector<float>& vertices, bool usingTransparency) : Model(vertices, usingTransparency)
+TexturedModel::TexturedModel(const char* inPath, bool usingTransparency) : Model(usingTransparency)
 {
 	m_Path = inPath;
 }

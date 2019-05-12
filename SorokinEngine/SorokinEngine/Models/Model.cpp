@@ -1,15 +1,7 @@
 #include "Model.h"
 
-Model::Model(const std::vector<float>& vertices, const std::vector<int>& indices, bool usingTransparency)
+Model::Model(bool usingTransparency)
 {
-	m_vertices = vertices;
-	m_indices = indices;
-	m_usingTransparency = usingTransparency;
-}
-
-Model::Model(const std::vector<float>& vertices, bool usingTransparency)
-{
-	m_vertices = vertices;
 	m_usingTransparency = usingTransparency;
 }
 
