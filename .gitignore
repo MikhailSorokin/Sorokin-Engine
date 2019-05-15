@@ -40,6 +40,8 @@ glfw-3.2.1/
 *.opendb
 *.tlog
 *.log
+*.vcxproj
+*.vcxproj.filters
 
 ## TODO: If you have NuGet Package Restore enabled, uncomment this
 #packages/
