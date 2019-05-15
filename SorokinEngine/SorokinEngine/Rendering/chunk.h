@@ -31,9 +31,9 @@ struct chunk {
 		for (int x = 0; x < CX; x++) {
 			for (int y = 0; y < CY; y++) {
 				for (int z = 0; z < CZ; z++) {
-					mesh.update(Mesh::getMeshFace(BlockFace::Back), x, y, z);
-					mesh.update(Mesh::getMeshFace(BlockFace::Bottom), x, y, z);
-					mesh.update(Mesh::getMeshFace(BlockFace::Left), x, y, z);
+					mesh.update(Mesh::getMeshFace(BlockFace::Back), x - 1, y, z);
+					mesh.update(Mesh::getMeshFace(BlockFace::Bottom), x, y - 1, z);
+					mesh.update(Mesh::getMeshFace(BlockFace::Left), x, y, z - 1);
 					mesh.update(Mesh::getMeshFace(BlockFace::Front), x, y, z);
 					mesh.update(Mesh::getMeshFace(BlockFace::Top), x, y, z);
 					mesh.update(Mesh::getMeshFace(BlockFace::Right), x, y, z);
@@ -43,6 +43,21 @@ struct chunk {
 
 		std::cout << mesh.vertices.size() << " vertices" << std::endl;
 	
+
+		// creating vertices
+		/*std::vector<float> temp_vertices;
+		for (std::size_t i = 0; i < mesh.vertices.size() / 3; ++i)  // we will move from one line to another
+		{
+			temp_vertices.push_back(mesh.vertices[i * 3]);
+			temp_vertices.push_back(mesh.vertices[1 + i * 3]);
+			temp_vertices.push_back(mesh.vertices[2 + i * 3]);
+
+			temp_vertices.push_back(mesh.texCoords[i * 3]);
+			temp_vertices.push_back(mesh.texCoords[1 + i * 3]);
+		}
+
+		temp_vertices.reserve();*/
+
 		//VAO, VBO
 		Loader loader;
 		loader.createAttributes(mesh.vertices);

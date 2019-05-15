@@ -24,7 +24,7 @@ glfw-3.2.1/
 *.meta
 *.obj
 *.pch
-SorokinEngine/Debug/SorokinEngine.pdb
+*.pdb
 *.pgc
 *.pgd
 *.rsp
@@ -33,10 +33,13 @@ SorokinEngine/Debug/SorokinEngine.pdb
 *.tli
 *.tlh
 *.tmp
+*.idb
 *.vspscc
 .builds
 *.dotCover
 *.opendb
+*.tlog
+*.log
 
 ## TODO: If you have NuGet Package Restore enabled, uncomment this
 #packages/

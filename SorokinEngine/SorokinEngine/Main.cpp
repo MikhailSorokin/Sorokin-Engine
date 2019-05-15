@@ -27,8 +27,9 @@ int main() {
 		return -1;
 	}
 
+	
 	/* ============================ LOAD the SHADERS here (to be loaded in their own class) ==================================== */
-	Shader* chunkShaders = new Shader("Shaders/Vertex/chunk.vert", "Shaders/Fragment/chunk.frag");
+	auto chunkShaders = std::make_unique<Shader>("Shaders/Vertex/chunk.vert", "Shaders/Fragment/chunk.frag");
 	chunkShaders->compileShaders();
 	GLuint shaderProgramID = chunkShaders->createProgram();
 	
@@ -91,8 +92,6 @@ int main() {
 
 		window.update();
 	}
-
-	delete(chunkShaders);
 
 	return 0;
 }

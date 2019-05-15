@@ -126,6 +126,7 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Models\Model.cpp" />
     <ClCompile Include="Models\TexturedModel.cpp" />
+    <ClCompile Include="Quad.cpp" />
     <ClCompile Include="Rendering\Window.cpp" />
     <ClCompile Include="Shaders\Shader.cpp" />
     <ClCompile Include="Utilities\Loader.cpp" />
@@ -137,6 +138,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Models\TexturedModel.h" />
+    <ClInclude Include="Quad.h" />
     <ClInclude Include="Rendering\chunk.h" />
     <ClInclude Include="Rendering\Mesh.h" />
     <ClInclude Include="Utilities\FileSystem.h" />
