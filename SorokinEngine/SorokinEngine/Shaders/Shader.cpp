@@ -1,7 +1,5 @@
 #include "Shader.h"
 
-
-
 Shader::Shader(const char* vertexSrcPath, const char* destSrcPath)
 {
 	m_vertexShaderSource = filetobuf(vertexSrcPath);
