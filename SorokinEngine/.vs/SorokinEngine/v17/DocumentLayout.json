@@ -3,38 +3,72 @@
   "WorkspaceRootPath": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Shaders\\Shader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|solutionrelative:SorokinEngine\\Shaders\\Shader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Shaders\\Fragment\\simple_triangle2.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|solutionrelative:SorokinEngine\\Shaders\\Fragment\\simple_triangle2.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Shaders\\Fragment\\simple_triangle.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|solutionrelative:SorokinEngine\\Shaders\\Fragment\\simple_triangle.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Shaders\\Fragment\\simple_quad.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|solutionrelative:SorokinEngine\\Shaders\\Fragment\\simple_quad.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Shaders\\Fragment\\opacity_lerp_triangle.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|solutionrelative:SorokinEngine\\Shaders\\Fragment\\opacity_lerp_triangle.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Shaders\\Fragment\\cube.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|solutionrelative:SorokinEngine\\Shaders\\Fragment\\cube.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|solutionrelative:SorokinEngine\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\glad\\src\\glad.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Rendering\\Chunk.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|solutionrelative:SorokinEngine\\Rendering\\Chunk.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\Open GL Stuff\\include\\glad\\glad.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Models\\TexturedModel.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|solutionrelative:SorokinEngine\\Models\\TexturedModel.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Models\\TexturedModel.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|solutionrelative:SorokinEngine\\Models\\TexturedModel.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Rendering\\World\\World.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|solutionrelative:SorokinEngine\\Rendering\\World\\World.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Rendering\\Window.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|solutionrelative:SorokinEngine\\Rendering\\Window.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Rendering\\Window.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|solutionrelative:SorokinEngine\\Rendering\\Window.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Shaders\\Vertex\\cube_chunk.vert||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|solutionrelative:SorokinEngine\\Shaders\\Vertex\\cube_chunk.vert||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Shaders\\Vertex\\opacity_lerp_triangle.vert||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|solutionrelative:SorokinEngine\\Shaders\\Vertex\\opacity_lerp_triangle.vert||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Shaders\\Vertex\\simple_quad.vert||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|solutionrelative:SorokinEngine\\Shaders\\Vertex\\simple_quad.vert||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Shaders\\Vertex\\simple_triangle.vert||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|solutionrelative:SorokinEngine\\Shaders\\Vertex\\simple_triangle.vert||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Shaders\\Vertex\\simple_triangle2.vert||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|solutionrelative:SorokinEngine\\Shaders\\Vertex\\simple_triangle2.vert||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Shaders\\Shader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|solutionrelative:SorokinEngine\\Shaders\\Shader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Utilities\\Loader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|solutionrelative:SorokinEngine\\Utilities\\Loader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Makefile||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|solutionrelative:SorokinEngine\\Makefile||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Tile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|solutionrelative:SorokinEngine\\Tile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Tile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{CA877EEE-B295-4CBF-8B52-A02C7C58D8B7}|SorokinEngine\\SorokinEngine.vcxproj|solutionrelative:SorokinEngine\\Tile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -44,126 +78,228 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 10,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Shader.cpp",
-              "DocumentMoniker": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Shaders\\Shader.cpp",
-              "RelativeDocumentMoniker": "SorokinEngine\\Shaders\\Shader.cpp",
-              "ToolTip": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Shaders\\Shader.cpp",
-              "RelativeToolTip": "SorokinEngine\\Shaders\\Shader.cpp",
-              "ViewState": "AgIAACcAAAAAAAAAAAASwDUAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-12T21:12:29.069Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "simple_triangle2.frag",
-              "DocumentMoniker": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Shaders\\Fragment\\simple_triangle2.frag",
-              "RelativeDocumentMoniker": "SorokinEngine\\Shaders\\Fragment\\simple_triangle2.frag",
-              "ToolTip": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Shaders\\Fragment\\simple_triangle2.frag",
-              "RelativeToolTip": "SorokinEngine\\Shaders\\Fragment\\simple_triangle2.frag",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-02-12T21:12:22.76Z",
+              "DocumentIndex": 3,
+              "Title": "TexturedModel.h",
+              "DocumentMoniker": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Models\\TexturedModel.h",
+              "RelativeDocumentMoniker": "SorokinEngine\\Models\\TexturedModel.h",
+              "ToolTip": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Models\\TexturedModel.h",
+              "RelativeToolTip": "SorokinEngine\\Models\\TexturedModel.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-12T21:35:56.26Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "simple_triangle.frag",
-              "DocumentMoniker": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Shaders\\Fragment\\simple_triangle.frag",
-              "RelativeDocumentMoniker": "SorokinEngine\\Shaders\\Fragment\\simple_triangle.frag",
-              "ToolTip": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Shaders\\Fragment\\simple_triangle.frag",
-              "RelativeToolTip": "SorokinEngine\\Shaders\\Fragment\\simple_triangle.frag",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-02-12T21:12:15.476Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "simple_quad.frag",
-              "DocumentMoniker": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Shaders\\Fragment\\simple_quad.frag",
-              "RelativeDocumentMoniker": "SorokinEngine\\Shaders\\Fragment\\simple_quad.frag",
-              "ToolTip": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Shaders\\Fragment\\simple_quad.frag",
-              "RelativeToolTip": "SorokinEngine\\Shaders\\Fragment\\simple_quad.frag",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-02-12T21:12:10.901Z",
+              "Title": "TexturedModel.cpp",
+              "DocumentMoniker": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Models\\TexturedModel.cpp",
+              "RelativeDocumentMoniker": "SorokinEngine\\Models\\TexturedModel.cpp",
+              "ToolTip": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Models\\TexturedModel.cpp",
+              "RelativeToolTip": "SorokinEngine\\Models\\TexturedModel.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-12T21:35:46.157Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "opacity_lerp_triangle.frag",
-              "DocumentMoniker": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Shaders\\Fragment\\opacity_lerp_triangle.frag",
-              "RelativeDocumentMoniker": "SorokinEngine\\Shaders\\Fragment\\opacity_lerp_triangle.frag",
-              "ToolTip": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Shaders\\Fragment\\opacity_lerp_triangle.frag",
-              "RelativeToolTip": "SorokinEngine\\Shaders\\Fragment\\opacity_lerp_triangle.frag",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-02-12T21:12:06.022Z",
+              "Title": "World.cpp",
+              "DocumentMoniker": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Rendering\\World\\World.cpp",
+              "RelativeDocumentMoniker": "SorokinEngine\\Rendering\\World\\World.cpp",
+              "ToolTip": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Rendering\\World\\World.cpp",
+              "RelativeToolTip": "SorokinEngine\\Rendering\\World\\World.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-12T21:35:45.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Chunk.h",
+              "DocumentMoniker": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Rendering\\Chunk.h",
+              "RelativeDocumentMoniker": "SorokinEngine\\Rendering\\Chunk.h",
+              "ToolTip": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Rendering\\Chunk.h",
+              "RelativeToolTip": "SorokinEngine\\Rendering\\Chunk.h",
+              "ViewState": "AgIAALYAAAAAAAAAAAAqwMoAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-12T21:35:40.872Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "cube.frag",
-              "DocumentMoniker": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Shaders\\Fragment\\cube.frag",
-              "RelativeDocumentMoniker": "SorokinEngine\\Shaders\\Fragment\\cube.frag",
-              "ToolTip": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Shaders\\Fragment\\cube.frag",
-              "RelativeToolTip": "SorokinEngine\\Shaders\\Fragment\\cube.frag",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-02-12T21:11:48.583Z",
+              "Title": "Window.cpp",
+              "DocumentMoniker": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Rendering\\Window.cpp",
+              "RelativeDocumentMoniker": "SorokinEngine\\Rendering\\Window.cpp",
+              "ToolTip": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Rendering\\Window.cpp",
+              "RelativeToolTip": "SorokinEngine\\Rendering\\Window.cpp",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-12T21:35:33.448Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "glad.h",
-              "DocumentMoniker": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\Open GL Stuff\\include\\glad\\glad.h",
-              "RelativeDocumentMoniker": "..\\Open GL Stuff\\include\\glad\\glad.h",
-              "ToolTip": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\Open GL Stuff\\include\\glad\\glad.h",
-              "RelativeToolTip": "..\\Open GL Stuff\\include\\glad\\glad.h",
+              "DocumentIndex": 6,
+              "Title": "Window.h",
+              "DocumentMoniker": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Rendering\\Window.h",
+              "RelativeDocumentMoniker": "SorokinEngine\\Rendering\\Window.h",
+              "ToolTip": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Rendering\\Window.h",
+              "RelativeToolTip": "SorokinEngine\\Rendering\\Window.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-02-12T20:49:12.381Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Main.cpp",
-              "DocumentMoniker": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Main.cpp",
-              "RelativeDocumentMoniker": "SorokinEngine\\Main.cpp",
-              "ToolTip": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Main.cpp",
-              "RelativeToolTip": "SorokinEngine\\Main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-12T20:45:47.13Z",
+              "WhenOpened": "2025-02-12T21:35:32.391Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "glad.c",
-              "DocumentMoniker": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\glad\\src\\glad.c",
-              "RelativeDocumentMoniker": "..\\glad\\src\\glad.c",
-              "ToolTip": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\glad\\src\\glad.c",
-              "RelativeToolTip": "..\\glad\\src\\glad.c",
-              "ViewState": "AgIAAHYEAAAAAAAAAAASwIoEAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2025-02-12T20:29:41.106Z"
+              "Title": "cube_chunk.vert",
+              "DocumentMoniker": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Shaders\\Vertex\\cube_chunk.vert",
+              "RelativeDocumentMoniker": "SorokinEngine\\Shaders\\Vertex\\cube_chunk.vert",
+              "ToolTip": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Shaders\\Vertex\\cube_chunk.vert",
+              "RelativeToolTip": "SorokinEngine\\Shaders\\Vertex\\cube_chunk.vert",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-02-12T21:35:30.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "opacity_lerp_triangle.vert",
+              "DocumentMoniker": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Shaders\\Vertex\\opacity_lerp_triangle.vert",
+              "RelativeDocumentMoniker": "SorokinEngine\\Shaders\\Vertex\\opacity_lerp_triangle.vert",
+              "ToolTip": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Shaders\\Vertex\\opacity_lerp_triangle.vert",
+              "RelativeToolTip": "SorokinEngine\\Shaders\\Vertex\\opacity_lerp_triangle.vert",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-02-12T21:35:29.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "simple_quad.vert",
+              "DocumentMoniker": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Shaders\\Vertex\\simple_quad.vert",
+              "RelativeDocumentMoniker": "SorokinEngine\\Shaders\\Vertex\\simple_quad.vert",
+              "ToolTip": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Shaders\\Vertex\\simple_quad.vert",
+              "RelativeToolTip": "SorokinEngine\\Shaders\\Vertex\\simple_quad.vert",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-02-12T21:35:29.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "simple_triangle.vert",
+              "DocumentMoniker": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Shaders\\Vertex\\simple_triangle.vert",
+              "RelativeDocumentMoniker": "SorokinEngine\\Shaders\\Vertex\\simple_triangle.vert",
+              "ToolTip": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Shaders\\Vertex\\simple_triangle.vert",
+              "RelativeToolTip": "SorokinEngine\\Shaders\\Vertex\\simple_triangle.vert",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-02-12T21:35:28.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Main.cpp",
+              "DocumentMoniker": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Main.cpp",
+              "RelativeDocumentMoniker": "SorokinEngine\\Main.cpp",
+              "ToolTip": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Main.cpp",
+              "RelativeToolTip": "SorokinEngine\\Main.cpp",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAiwHEAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-12T21:31:59.395Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "simple_triangle2.vert",
+              "DocumentMoniker": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Shaders\\Vertex\\simple_triangle2.vert",
+              "RelativeDocumentMoniker": "SorokinEngine\\Shaders\\Vertex\\simple_triangle2.vert",
+              "ToolTip": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Shaders\\Vertex\\simple_triangle2.vert",
+              "RelativeToolTip": "SorokinEngine\\Shaders\\Vertex\\simple_triangle2.vert",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-02-12T21:35:27.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Shader.cpp",
+              "DocumentMoniker": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Shaders\\Shader.cpp",
+              "RelativeDocumentMoniker": "SorokinEngine\\Shaders\\Shader.cpp",
+              "ToolTip": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Shaders\\Shader.cpp",
+              "RelativeToolTip": "SorokinEngine\\Shaders\\Shader.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-12T21:34:56.494Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Loader.cpp",
+              "DocumentMoniker": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Utilities\\Loader.cpp",
+              "RelativeDocumentMoniker": "SorokinEngine\\Utilities\\Loader.cpp",
+              "ToolTip": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Utilities\\Loader.cpp",
+              "RelativeToolTip": "SorokinEngine\\Utilities\\Loader.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-12T21:35:15.339Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Tile.h",
+              "DocumentMoniker": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Tile.h",
+              "RelativeDocumentMoniker": "SorokinEngine\\Tile.h",
+              "ToolTip": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Tile.h",
+              "RelativeToolTip": "SorokinEngine\\Tile.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-12T21:34:48.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Tile.cpp",
+              "DocumentMoniker": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Tile.cpp",
+              "RelativeDocumentMoniker": "SorokinEngine\\Tile.cpp",
+              "ToolTip": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Tile.cpp",
+              "RelativeToolTip": "SorokinEngine\\Tile.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-12T21:34:47.636Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Makefile",
+              "DocumentMoniker": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Makefile",
+              "RelativeDocumentMoniker": "SorokinEngine\\Makefile",
+              "ToolTip": "C:\\Users\\sorok\\Documents\\Unreal Projects\\Sorokin-Engine\\SorokinEngine\\SorokinEngine\\Makefile",
+              "RelativeToolTip": "SorokinEngine\\Makefile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-02-12T21:34:46.843Z",
+              "EditorCaption": ""
             }
           ]
         }

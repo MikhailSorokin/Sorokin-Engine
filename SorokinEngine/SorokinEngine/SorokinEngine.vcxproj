@@ -144,6 +144,7 @@
     <None Include="Shaders\Fragment\opacity_lerp_triangle.frag" />
     <None Include="Shaders\Fragment\simple_quad.frag" />
     <None Include="Shaders\Vertex\cube.vert" />
+    <None Include="Shaders\Vertex\cube_chunk.vert" />
     <None Include="Shaders\Vertex\opacity_lerp_triangle.vert" />
     <None Include="Shaders\Fragment\simple_triangle.frag" />
     <None Include="Shaders\Vertex\simple_quad.vert" />
